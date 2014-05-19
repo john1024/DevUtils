@@ -1,3 +1,15 @@
+#Android generated
+bin
+gen
+
+#Eclipse
+.project
+.classpath
+.settings
+
+#OSX
+.DS_Store
+
 # Built application files
 *.apk
 *.ap_
