@@ -85,6 +85,7 @@ public class IntentUtils {
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_TEXT, content);
 		intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		context.startActivity(Intent.createChooser(intent, title));
 	}
 
