@@ -12,7 +12,7 @@ import com.dev1024.utils.listener.AnimListener;
  * 
  * AnimUtils
  * 
- * Created by John on 2014Äê6ÔÂ15ÈÕ
+ * Created by John on 2014-6-15
  */
 public class AnimUtils {
 
