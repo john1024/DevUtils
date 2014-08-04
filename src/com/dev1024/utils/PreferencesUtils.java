@@ -39,8 +39,12 @@ public class PreferencesUtils {
     }
 
     public static int getInt(Context context, String name, String key) {
+        return getInt(context, name, key, -1);
+    }
+
+    public static int getInt(Context context, String name, String key, int defaultValue) {
         SharedPreferences pre = getSharedPreferences(context, name);
-        return pre.getInt(key, -1);
+        return pre.getInt(key, defaultValue);
     }
 
 }
