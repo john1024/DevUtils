@@ -1,5 +1,7 @@
 package com.dev1024.utils;
 
+import java.io.File;
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -152,5 +154,20 @@ public class IntentUtils {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Install a application .
+	 * @param context
+	 * @param file
+	 */
+    public static void installApk(Context context, File file) {
+        if(file==null) return;
+        if(!file.exists()) return;
+        Intent intent = new Intent();
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setAction(android.content.Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+        context.startActivity(intent);
+    }
 
 }
